@@ -4,31 +4,26 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  // let counter = 1
-  // const addValue = () => {
-  //   counter = counter + 1;
-  //   console.log(counter)
-  // }
 
   let [counter, setCounter] = useState(18);
   const addValue = () => {
-    counter += 1;
-    setCounter(counter);
+    if (counter === 20) return
+    setCounter(counter + 1)
   }
 
   const removeValue = () => {
-    counter -= 1;
-    setCounter(counter)
+    if (counter <= 0) return
+    setCounter(counter - 1)
   }
 
   return (
     <>
-    <h1>Why we use Hooks | Counter Project</h1>
-    <p>Counter Value: {coun ter}</p>
-    <button onClick={addValue}>Add Value {counter}</button>
-    <br />
-    <br />
-    <button onClick={removeValue}>Remove Value {counter}</button>
+      <h1>Why we use Hooks | Counter Project</h1>
+      <p>Counter Value: {counter}</p>
+      <button onClick={addValue}>Add Value {counter}</button>
+      <br />
+      <br />
+      <button onClick={removeValue}>Remove Value {counter}</button>
     </>
   )
 }
