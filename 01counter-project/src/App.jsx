@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -24,7 +22,7 @@ function App() {
   return (
     <>
     <h1>Why we use Hooks | Counter Project</h1>
-    <p>Counter Value: {coun ter}</p>
+    <p>Counter Value: {counter}</p>
     <button onClick={addValue}>Add Value {counter}</button>
     <br />
     <br />
